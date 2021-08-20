@@ -41,9 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication',
     'rest_framework_simplejwt',
-    'oauth2_provider',
-    'social_django',
-    'rest_framework_social_oauth2',
+    
 ]
 import os
 
@@ -61,30 +59,9 @@ REST_FRAMEWORK = {
        'rest_framework.authentication.SessionAuthentication',
        'rest_framework.authentication.BasicAuthentication',
        'rest_framework_simplejwt.authentication.JWTAuthentication',
-       'rest_framework.authentication.TokenAuthentication',
-       'oauth2_provider.contrib.rest_framework.OAuth2Authentication',  # django-oauth-toolkit >= 1.0.
-        'rest_framework_social_oauth2.authentication.SocialAuthentication',
-   ),
+       'rest_framework.authentication.TokenAuthentication',)
+      
 }
-
-AUTHENTICATION_BACKENDS = (
-    # Facebook OAuth2
-    'social_core.backends.facebook.FacebookAppOAuth2',
-    'social_core.backends.facebook.FacebookOAuth2',
-    # Google OAuth2
-    'social_core.backends.google.GoogleOAuth2',
-   'rest_framework_social_oauth2.backends.DjangoOAuth2',
-   'django.contrib.auth.backends.ModelBackend',
-)
-# Google configuration
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '30238126801-97rckh1b33mn0f7a25m141j81bf8mk02.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '-F1UUuCXfmw_e7fx9LO0MY5G'        #'<your app secret goes here>'
-# Define SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE to get extra permissions from Google.
-SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
-    'https://www.googleapis.com/auth/userinfo.email',
-    'https://www.googleapis.com/auth/userinfo.profile',
-]
-#facebook config
 
 
 
