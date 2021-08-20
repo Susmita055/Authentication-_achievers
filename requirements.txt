@@ -5,5 +5,5 @@ Django==3.2.2
 gunicorn==20.0.4
 pytz==2019.3
 sqlparse==0.3.0
-rest_framework== 3.12.1
-djangorestframework-simplejwt== 4.7.2
+djangorestframework==3.11.2
+djangorestframework-simplejwt==4.7.2
